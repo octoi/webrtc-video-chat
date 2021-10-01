@@ -1,0 +1,15 @@
+{
+  "name": "google_meet",
+  "version": "1.0.0",
+  "description": "Something using webRTC & socket io",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "author": "fadhilsaheer",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.2.0"
+  }
+}
