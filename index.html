@@ -9,6 +9,22 @@
   <link rel="stylesheet" href="./public/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="./public/assets/css/style.css">
+  <script src="./public/assets/js/jquery-3.4.1.min.js"></script>
+  <script src="./public/assets/js/app.js"></script>
+  <script>
+    $(function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      var meetingId = urlParams.get('meetingID');
+      var userId = window.prompt('Enter your username');
+      if (!userId || !meetingId) {
+        alert('User id or meeting id is missing');
+        window.location.href = '/action.html';
+        return;
+      }
+      $('.meeting-container').show();
+      MyApp._init(userId, meetingId)
+    })
+  </script>
 </head>
 
 <body>
